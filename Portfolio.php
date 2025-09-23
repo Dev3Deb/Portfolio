@@ -832,112 +832,118 @@
 
         /* Projets Section */
         .projets {
-    padding: var(--space-2xl) 0;
-    background: var(--bg-secondary);
-}
+            padding: var(--space-2xl) 0;
+            background: var(--bg-secondary);
+        }
 
-.project-card {
-    background: rgba(255, 255, 255, 0.05);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    border-radius: var(--radius-lg);
-    padding: var(--space-lg);
-    transition: var(--transition-normal);
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    position: relative;
-    overflow: hidden;
-}
+        .project-card {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: var(--radius-lg);
+            padding: var(--space-lg);
+            transition: var(--transition-normal);
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            overflow: hidden;
+        }
 
-.project-card::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(135deg, rgba(99, 102, 241, 0.1), rgba(139, 92, 246, 0.1));
-    opacity: 0;
-    transition: var(--transition-normal);
-    z-index: 0;
-    pointer-events: none; /* ← AJOUT IMPORTANT */
-}
+        .project-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, rgba(99, 102, 241, 0.1), rgba(139, 92, 246, 0.1));
+            opacity: 0;
+            transition: var(--transition-normal);
+            z-index: 0;
+            pointer-events: none;
+            /* ← AJOUT IMPORTANT */
+        }
 
-.project-card:hover::before {
-    opacity: 1;
-}
+        .project-card:hover::before {
+            opacity: 1;
+        }
 
-.project-card:hover {
-    background: rgba(255, 255, 255, 0.08);
-    transform: translateY(-5px);
-    box-shadow: var(--shadow-lg);
-}
+        .project-card:hover {
+            background: rgba(255, 255, 255, 0.08);
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-lg);
+        }
 
-.project-title {
-    color: var(--text-primary);
-    font-size: 1.3rem;
-    font-weight: 700;
-    margin-bottom: var(--space-md);
-    position: relative;
-    z-index: 1;
-}
+        .project-title {
+            color: var(--text-primary);
+            font-size: 1.3rem;
+            font-weight: 700;
+            margin-bottom: var(--space-md);
+            position: relative;
+            z-index: 1;
+        }
 
-.project-description {
-    color: var(--text-secondary);
-    line-height: 1.7;
-    margin-bottom: var(--space-lg);
-    flex-grow: 1;
-    position: relative;
-    z-index: 1;
-}
+        .project-description {
+            color: var(--text-secondary);
+            line-height: 1.7;
+            margin-bottom: var(--space-lg);
+            flex-grow: 1;
+            position: relative;
+            z-index: 1;
+        }
 
-.tech-stack {
-    display: flex;
-    flex-wrap: wrap;
-    gap: var(--space-sm);
-    margin-bottom: var(--space-lg);
-    position: relative;
-    z-index: 1;
-}
+        .tech-stack {
+            display: flex;
+            flex-wrap: wrap;
+            gap: var(--space-sm);
+            margin-bottom: var(--space-lg);
+            position: relative;
+            z-index: 1;
+        }
 
-.tech-tag {
-    background: rgba(99, 102, 241, 0.2);
-    color: var(--accent-primary);
-    padding: var(--space-xs) var(--space-sm);
-    border-radius: var(--radius-sm);
-    font-size: 0.8rem;
-    font-weight: 500;
-    border: 1px solid rgba(99, 102, 241, 0.3);
-}
+        .tech-tag {
+            background: rgba(99, 102, 241, 0.2);
+            color: var(--accent-primary);
+            padding: var(--space-xs) var(--space-sm);
+            border-radius: var(--radius-sm);
+            font-size: 0.8rem;
+            font-weight: 500;
+            border: 1px solid rgba(99, 102, 241, 0.3);
+        }
 
-.project-links {
-    margin-top: 15px;
-    display: flex;
-    gap: 10px;
-    position: relative; /* ← AJOUT */
-    z-index: 1; /* ← AJOUT */
-}
+        .project-links {
+            margin-top: 15px;
+            display: flex;
+            gap: 10px;
+            position: relative;
+            /* ← AJOUT */
+            z-index: 1;
+            /* ← AJOUT */
+        }
 
-.btn-project {
-    display: inline-flex;
-    align-items: center;
-    gap: 6px;
-    padding: 8px 14px;
-    font-size: 14px;
-    font-weight: 500;
-    color: #fff;
-    background: #007bff;
-    border-radius: 6px;
-    text-decoration: none;
-    transition: 0.3s ease;
-    position: relative; /* ← AJOUT */
-    z-index: 2; /* ← AJOUT */
-}
+        .btn-project {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 8px 14px;
+            font-size: 14px;
+            font-weight: 500;
+            color: #fff;
+            background: #007bff;
+            border-radius: 6px;
+            text-decoration: none;
+            transition: 0.3s ease;
+            position: relative;
+            /* ← AJOUT */
+            z-index: 2;
+            /* ← AJOUT */
+        }
 
-.btn-project:hover {
-    background: #0056b3;
-    transform: translateY(-2px); /* ← AMÉLIORATION */
-}
+        .btn-project:hover {
+            background: #0056b3;
+            transform: translateY(-2px);
+            /* ← AMÉLIORATION */
+        }
 
         /* Contact Section */
         .contact {
@@ -2015,6 +2021,31 @@
                                     <i class="fas fa-external-link-alt"></i>
                                     Voir l'attestation
                                 </a>
+                            </div>
+                        </div>
+                        <div class="certifications-grid">
+                            <div class="certification-card" data-aos="flip-left" data-aos-delay="200">
+                                <div class="certification-header">
+                                    <div class="certification-icon">
+                                        <i class="fas fa-microphone-alt"></i>
+                                    </div>
+                                    <div class="certification-info">
+                                        <h3 class="certification-name">Formation en Art Oratoire</h3>
+                                        <div class="certification-org">CLUB RFI COTONOU</div>
+                                        <div class="certification-year">2023</div>
+                                    </div>
+                                </div>
+                                <div class="certification-footer">
+                                    <div class="certification-status">
+                                        <i class="fas fa-check-circle"></i>
+                                        Attestation de formation
+                                    </div>
+                                    <a href="https://drive.google.com/file/d/EXEMPLE_ID/view" target="_blank"
+                                        rel="noopener noreferrer" class="btn-certificate">
+                                        <i class="fas fa-external-link-alt"></i>
+                                        Voir l'attestation
+                                    </a>
+                                </div>
                             </div>
                         </div>
                     </div>
