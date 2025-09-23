@@ -1777,6 +1777,19 @@
                             </p>
                         </div>
                     </div>
+                    <div class="timeline">
+                        <div class="timeline-item" data-aos="fade-left">
+                            <div class="timeline-date">2023</div>
+                            <h3 class="timeline-title">Formation en Art Oratoire</h3>
+                            <div class="timeline-institution">CLUB RFI COTONOU</div>
+                            <p class="timeline-description">
+                                Formation pratique axée sur la prise de parole en public, le développement de la
+                                confiance,
+                                la maîtrise de la voix et du langage corporel. Exercices de discours, improvisation et
+                                techniques pour captiver un auditoire.
+                            </p>
+                        </div>
+                    </div>
                 </div>
             </div>
             <div class="stars"
