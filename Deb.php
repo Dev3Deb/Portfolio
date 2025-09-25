@@ -1,25 +1,39 @@
 <!DOCTYPE html>
 <html lang="fr" data-theme="dark">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>NASSAM Pêlê Deb - Développeuse Web & Mobile | Portfolio</title>
-    <meta name="description" content="Portfolio de NASSAM Pêlê Deb, développeuse web et mobile spécialisée en PHP, JavaScript, Flutter...">
+    <meta name="description"
+        content="Portfolio de NASSAM Pêlê Deb, développeuse web et mobile spécialisée en PHP, JavaScript, Flutter...">
     <meta name="author" content="NASSAM Pêlê Deb">
     <meta property="og:title" content="NASSAM Pêlê Deb - Développeuse Web & Mobile">
     <meta property="twitter:title" content="NASSAM Pêlê Deb - Développeuse Web & Mobile">
-    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 120 120'><circle cx='60' cy='60' r='56' fill='%23121222'/><path d='M20 80a40 40 0 0 1 80 0' fill='none' stroke='%237c4dff' stroke-width='10'/></svg>">
+    <link rel="icon" type="image/svg+xml"
+        href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 120 120'><circle cx='60' cy='60' r='56' fill='%23121222'/><path d='M20 80a40 40 0 0 1 80 0' fill='none' stroke='%237c4dff' stroke-width='10'/></svg>">
 
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- AOS Library for Scroll Animations -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <!-- EmailJS -->
     <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
-    <script>emailjs.init('qzau0cP_c8NsRSGf6');</script>
+    <script>
+        emailjs.init('qzau0cP_c8NsRSGf6'); // Remplacez par votre vraie Public Key
+    </script>
 
     <style>
         :root {
+            /* Couleurs */
             --bg-primary: #0f172a;
             --bg-secondary: #1e293b;
             --bg-tertiary: #334155;
@@ -32,24 +46,39 @@
             --success: #10b981;
             --warning: #f59e0b;
             --error: #ef4444;
+
+            /* Gradients */
             --gradient-primary: linear-gradient(135deg, var(--accent-primary) 0%, var(--accent-secondary) 100%);
+            --gradient-rainbow: linear-gradient(90deg, #ff0040 0%, #ffa000 25%, #00e0ff 50%, #b400ff 100%);
             --gradient-hero: linear-gradient(135deg, rgba(99, 102, 241, 0.15), rgba(139, 92, 246, 0.15));
+
+            /* Espacements */
             --space-xs: 0.5rem;
             --space-sm: 1rem;
             --space-md: 1.5rem;
             --space-lg: 2rem;
             --space-xl: 3rem;
             --space-2xl: 4rem;
+
+            /* Border radius */
             --radius-sm: 0.375rem;
             --radius-md: 0.5rem;
             --radius-lg: 0.75rem;
             --radius-xl: 1rem;
             --radius-2xl: 1.5rem;
+
+            /* Ombres */
             --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
             --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
             --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
             --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+            --shadow-2xl: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+
+            /* Transitions */
+            --transition-fast: 0.15s ease;
             --transition-normal: 0.3s ease;
+            --transition-slow: 0.5s ease;
+            --transition-bounce: 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
         }
 
         * {
@@ -64,7 +93,7 @@
         }
 
         body {
-            font-family: 'Inter', system-ui, -apple-system, sans-serif;
+            font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
             line-height: 1.6;
             color: var(--text-secondary);
             background: var(--bg-primary);
@@ -79,6 +108,7 @@
             padding: 0 var(--space-lg);
         }
 
+        /* Particles Background */
         #particles-js {
             position: fixed;
             width: 100%;
@@ -88,6 +118,8 @@
             left: 0;
         }
 
+
+        /* Header */
         .header {
             position: sticky;
             top: 0;
@@ -102,14 +134,18 @@
             box-shadow: var(--shadow-lg);
         }
 
+        /* Header content - Réduction du padding */
         .header-content {
             display: flex;
             justify-content: space-between;
             align-items: center;
             padding: var(--space-md) 0;
+            /* Réduit de var(--space-lg) à var(--space-md) */
             gap: var(--space-lg);
         }
 
+
+        /* Brand */
         .brand {
             display: flex;
             align-items: center;
@@ -117,9 +153,12 @@
             cursor: pointer;
         }
 
+        /* Optionnel: Réduire aussi la taille du logo et de la marque */
         .logo {
             width: 40px;
+            /* Réduit de 48px à 40px */
             height: 40px;
+            /* Réduit de 48px à 40px */
             flex-shrink: 0;
             transition: var(--transition-normal);
         }
@@ -130,6 +169,7 @@
 
         .brand-info h1 {
             font-size: 1.125rem;
+            /* Réduit de 1.25rem à 1.125rem */
             background: var(--gradient-primary);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
@@ -140,6 +180,7 @@
 
         .brand-info p {
             font-size: 0.8125rem;
+            /* Réduit de 0.875rem à 0.8125rem */
             color: var(--text-muted);
             margin: 0;
         }
@@ -147,6 +188,7 @@
         .nav {
             display: flex;
             gap: var(--space-sm);
+            /* Réduit de var(--space-md) à var(--space-sm) */
             list-style: none;
         }
 
@@ -154,11 +196,14 @@
             color: var(--text-secondary);
             text-decoration: none;
             padding: var(--space-xs) var(--space-sm);
+            /* Réduit de var(--space-sm) var(--space-md) */
             border-radius: var(--radius-sm);
+            /* Réduit de var(--radius-md) à var(--radius-sm) */
             transition: var(--transition-normal);
             position: relative;
             font-weight: 500;
             font-size: 0.875rem;
+            /* Ajout de cette ligne pour réduire la taille du texte */
         }
 
         .nav a:hover,
@@ -169,6 +214,7 @@
 
         .nav a.active {
             background: rgba(99, 102, 241, 0.2) !important;
+            border-color: rgba(99, 102, 241, 0.5) !important;
             color: var(--text-primary) !important;
         }
 
@@ -184,6 +230,7 @@
             border-radius: 50%;
         }
 
+        /* Mobile Menu */
         .mobile-menu-btn {
             display: none;
             background: none;
@@ -200,6 +247,7 @@
             background: rgba(99, 102, 241, 0.1);
         }
 
+        /* Hero Section */
         .hero {
             min-height: 100vh;
             display: flex;
@@ -282,7 +330,7 @@
         }
 
         .btn-primary {
-            background: var(--gradient-primary);
+            background: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary));
             color: white;
             box-shadow: var(--shadow-lg);
         }
@@ -303,6 +351,7 @@
             color: white;
         }
 
+        /* Bouton pour certificats */
         .btn-certificate {
             display: inline-flex;
             align-items: center;
@@ -325,6 +374,7 @@
             box-shadow: var(--shadow-md);
         }
 
+        /* Hero Photo */
         .hero-photo {
             display: flex;
             justify-content: center;
@@ -377,6 +427,7 @@
             object-position: center;
         }
 
+        /* Scroll Down Indicator */
         .scroll-down {
             position: absolute;
             bottom: 30px;
@@ -392,6 +443,11 @@
             animation: bounce 2s infinite;
         }
 
+        .scroll-down i {
+            font-size: 1.5rem;
+        }
+
+        /* About Section */
         .about {
             padding: var(--space-2xl) 0;
             background: linear-gradient(180deg, var(--bg-primary), var(--bg-secondary));
@@ -415,7 +471,7 @@
             aspect-ratio: 3/4;
             border-radius: var(--radius-xl);
             overflow: hidden;
-            background: var(--gradient-primary);
+            background: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary));
             padding: 3px;
             box-shadow: var(--shadow-lg);
             transition: var(--transition-normal);
@@ -432,6 +488,30 @@
             border-radius: var(--radius-xl);
             overflow: hidden;
             background: var(--bg-tertiary);
+        }
+
+        .about-photo-placeholder {
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, rgba(99, 102, 241, 0.2), rgba(139, 92, 246, 0.2));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--text-muted);
+            text-align: center;
+            padding: var(--space-md);
+            font-size: 1.1rem;
+        }
+
+        .about-photo-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+        }
+
+        .about-text {
+            padding-top: var(--space-lg);
         }
 
         .section-title {
@@ -503,6 +583,7 @@
             font-weight: 500;
         }
 
+        /* Formation Section */
         .formation {
             padding: var(--space-2xl) 0;
             background: var(--bg-secondary);
@@ -520,7 +601,7 @@
             top: 0;
             bottom: 0;
             width: 2px;
-            background: var(--gradient-primary);
+            background: linear-gradient(to bottom, var(--accent-primary), var(--accent-secondary));
         }
 
         .timeline-item {
@@ -576,6 +657,7 @@
             line-height: 1.7;
         }
 
+        /* Certifications Section */
         .certifications {
             padding: var(--space-2xl) 0;
             background: linear-gradient(180deg, var(--bg-secondary), var(--bg-primary));
@@ -675,6 +757,7 @@
             font-weight: 500;
         }
 
+        /* Compétences Section */
         .competences {
             padding: var(--space-2xl) 0;
             background: var(--bg-primary);
@@ -683,6 +766,10 @@
         .grid {
             display: grid;
             gap: var(--space-lg);
+        }
+
+        .grid-2 {
+            grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
         }
 
         .grid-3 {
@@ -732,7 +819,7 @@
 
         .progress-fill {
             height: 100%;
-            background: var(--gradient-primary);
+            background: linear-gradient(90deg, var(--accent-primary), var(--accent-secondary));
             border-radius: var(--radius-sm);
             transition: width 1.5s ease-in-out;
         }
@@ -743,13 +830,10 @@
             line-height: 1.6;
         }
 
+        /* Projets Section */
         .projets {
             padding: var(--space-2xl) 0;
             background: var(--bg-secondary);
-        }
-
-        .grid-2 {
-            grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
         }
 
         .project-card {
@@ -776,6 +860,8 @@
             opacity: 0;
             transition: var(--transition-normal);
             z-index: 0;
+            pointer-events: none;
+            /* ← AJOUT IMPORTANT */
         }
 
         .project-card:hover::before {
@@ -829,6 +915,10 @@
             margin-top: 15px;
             display: flex;
             gap: 10px;
+            position: relative;
+            /* ← AJOUT */
+            z-index: 1;
+            /* ← AJOUT */
         }
 
         .btn-project {
@@ -843,12 +933,19 @@
             border-radius: 6px;
             text-decoration: none;
             transition: 0.3s ease;
+            position: relative;
+            /* ← AJOUT */
+            z-index: 2;
+            /* ← AJOUT */
         }
 
         .btn-project:hover {
             background: #0056b3;
+            transform: translateY(-2px);
+            /* ← AMÉLIORATION */
         }
 
+        /* Contact Section */
         .contact {
             padding: var(--space-2xl) 0;
             background: linear-gradient(135deg, rgba(99, 102, 241, 0.05), rgba(139, 92, 246, 0.05));
@@ -938,6 +1035,7 @@
             min-height: 120px;
         }
 
+        /* Footer */
         .footer {
             background: var(--bg-secondary);
             padding: var(--space-2xl) 0 var(--space-lg);
@@ -969,6 +1067,7 @@
             transform: translateY(-2px);
         }
 
+        /* Theme Toggle */
         .theme-toggle {
             position: fixed;
             bottom: var(--space-lg);
@@ -992,83 +1091,128 @@
             box-shadow: var(--shadow-xl);
         }
 
+        /* Animations */
         @keyframes slideInLeft {
-            from { opacity: 0; transform: translateX(-50px); }
-            to { opacity: 1; transform: translateX(0); }
+            from {
+                opacity: 0;
+                transform: translateX(-50px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
         }
 
         @keyframes slideInRight {
-            from { opacity: 0; transform: translateX(50px); }
-            to { opacity: 1; transform: translateX(0); }
+            from {
+                opacity: 0;
+                transform: translateX(50px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
         }
 
         @keyframes float {
-            0%, 100% { transform: translateY(0px); }
-            50% { transform: translateY(-10px); }
+
+            0%,
+            100% {
+                transform: translateY(0px);
+            }
+
+            50% {
+                transform: translateY(-10px);
+            }
         }
 
         @keyframes bounce {
-            0%, 20%, 50%, 80%, 100% { transform: translateY(0) translateX(-50%); }
-            40% { transform: translateY(-10px) translateX(-50%); }
-            60% { transform: translateY(-5px) translateX(-50%); }
+
+            0%,
+            20%,
+            50%,
+            80%,
+            100% {
+                transform: translateY(0) translateX(-50%);
+            }
+
+            40% {
+                transform: translateY(-10px) translateX(-50%);
+            }
+
+            60% {
+                transform: translateY(-5px) translateX(-50%);
+            }
         }
 
-        .icon-circle {
-            display: inline-flex;
-            justify-content: center;
-            align-items: center;
-            width: 28px;
-            height: 28px;
-            border: 3px solid #6366f1;
-            border-radius: 50%;
-            margin-right: 8px;
-            vertical-align: middle;
-            color: #6366f1;
-            font-size: 14px;
-            animation: icon-blink 1.5s infinite alternate;
+        @keyframes fadeIn {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
 
-        @keyframes icon-blink {
-            0% { transform: scale(0.85); opacity: 0.4; }
-            50% { transform: scale(1.1); opacity: 1; }
-            100% { transform: scale(0.85); opacity: 0.4; }
+        @keyframes gradientShift {
+
+            0%,
+            100% {
+                transform: translateX(-50%) rotate(0deg);
+            }
+
+            50% {
+                transform: translateX(50%) rotate(180deg);
+            }
         }
 
-        .stars {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            margin: 50px 0 -60px;
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.6s ease-out;
         }
 
-        .stars span {
-            color: #6366f1;
-            font-size: 16px;
-            margin: 0 2px;
-            animation: star-blink 1.5s infinite alternate;
-        }
-
-        .stars span:nth-child(2) { animation-delay: 0.3s; }
-        .stars span:nth-child(3) { animation-delay: 0.6s; }
-
-        @keyframes star-blink {
-            0% { opacity: 0.3; transform: scale(0.8); }
-            50% { opacity: 1; transform: scale(1.2); }
-            100% { opacity: 0.3; transform: scale(0.8); }
-        }
-
+        /* Responsive Design */
         @media (max-width: 1024px) {
-            .contact-grid { grid-template-columns: 1fr; }
-            .hero-content { grid-template-columns: 1fr; gap: var(--space-xl); }
-            .certifications-grid { grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); }
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .hero-content {
+                grid-template-columns: 1fr;
+                gap: var(--space-xl);
+            }
+
+            .certifications-grid {
+                grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            }
         }
 
         @media (max-width: 768px) {
-            .hero-content { text-align: center; }
-            .hero-title { font-size: 2.5rem; }
-            .hero-photo-container { width: 280px; height: 280px; }
-            .about-content { grid-template-columns: 1fr; gap: var(--space-xl); }
-            .about-photo { position: static; max-width: 300px; margin: 0 auto; }
+            .hero-content {
+                text-align: center;
+            }
+
+            .hero-title {
+                font-size: 2.5rem;
+            }
+
+            .hero-photo-container {
+                width: 280px;
+                height: 280px;
+            }
+
+            .about-content {
+                grid-template-columns: 1fr;
+                gap: var(--space-xl);
+            }
+
+            .about-photo {
+                position: static;
+                max-width: 300px;
+                margin: 0 auto;
+            }
+
             .nav {
                 position: fixed;
                 top: 0;
@@ -1083,38 +1227,259 @@
                 z-index: 999;
                 box-shadow: -5px 0 25px rgba(0, 0, 0, 0.2);
             }
-            .nav.active { right: 0; }
-            .nav a { font-size: 1.1rem; padding: var(--space-md) var(--space-lg); }
-            .mobile-menu-btn { display: block; z-index: 1000; }
-            .grid-2 { grid-template-columns: 1fr; }
-            .grid-3 { grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); }
-            .certifications-grid { grid-template-columns: 1fr; }
+
+            .nav.active {
+                right: 0;
+            }
+
+            .nav a {
+                font-size: 1.1rem;
+                padding: var(--space-md) var(--space-lg);
+            }
+
+            .mobile-menu-btn {
+                display: block;
+                z-index: 1000;
+            }
+
+            .grid-2 {
+                grid-template-columns: 1fr;
+            }
+
+            .grid-3 {
+                grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            }
+
+            .header-content {
+                flex-direction: row;
+                gap: var(--space-md);
+            }
+
+            .brand {
+                justify-content: flex-start;
+            }
+
+            .brand-info h1 {
+                font-size: 1.125rem;
+                text-align: left;
+            }
+
+            .brand-info p {
+                text-align: left;
+            }
+
+            .certifications-grid {
+                grid-template-columns: 1fr;
+            }
         }
 
         @media (max-width: 480px) {
-            .container { padding: 0 var(--space-sm); }
-            .hero-title { font-size: 2rem; }
-            .hero-photo-container { width: 240px; height: 240px; }
-            .section-title h2 { font-size: 2rem; }
-            .logo { width: 40px; height: 40px; }
-            .brand-info h1 { font-size: 1rem; }
-            .brand-info p { font-size: 0.8125rem; }
-            .certification-card { padding: var(--space-md); }
-            .certification-header { flex-direction: column; text-align: center; gap: var(--space-sm); }
-            .certification-footer { flex-direction: column; gap: var(--space-sm); text-align: center; }
-            .hero-cta { justify-content: center; }
+            .container {
+                padding: 0 var(--space-sm);
+            }
+
+            .hero-title {
+                font-size: 2rem;
+            }
+
+            .hero-photo-container {
+                width: 240px;
+                height: 240px;
+            }
+
+            .section-title h2 {
+                font-size: 2rem;
+            }
+
+            .logo {
+                width: 40px;
+                height: 40px;
+            }
+
+            .brand-info h1 {
+                font-size: 1rem;
+            }
+
+            .brand-info p {
+                font-size: 0.8125rem;
+            }
+
+            .certification-card {
+                padding: var(--space-md);
+            }
+
+            .certification-header {
+                flex-direction: column;
+                text-align: center;
+                gap: var(--space-sm);
+            }
+
+            .certification-footer {
+                flex-direction: column;
+                gap: var(--space-sm);
+                text-align: center;
+            }
+
+            .hero-cta {
+                justify-content: center;
+            }
+        }
+
+        /* Accessibilité */
+        @media (prefers-reduced-motion: reduce) {
+
+            *,
+            *::before,
+            *::after {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+            }
+        }
+
+        .brand:focus-within,
+        .logo:focus,
+        .brand-info h1:focus {
+            outline: 2px solid var(--accent-primary);
+            outline-offset: 2px;
+            border-radius: 4px;
+        }
+
+        /* Animations décalées */
+        .fade-in:nth-child(1) {
+            animation-delay: 0.1s;
+        }
+
+        .fade-in:nth-child(2) {
+            animation-delay: 0.2s;
+        }
+
+        .fade-in:nth-child(3) {
+            animation-delay: 0.3s;
+        }
+
+        /* Effets de hover pour la marque */
+        .brand:hover .logo {
+            transform: scale(1.05);
+            transition: transform var(--transition-normal);
+        }
+
+        .brand:hover .brand-info h1 {
+            background: linear-gradient(135deg, var(--accent-secondary) 0%, var(--accent-tertiary) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            transition: all var(--transition-normal);
+        }
+
+        /* Print styles */
+        @media print {
+            .brand-info h1 {
+                color: #6366f1 !important;
+                -webkit-text-fill-color: #6366f1 !important;
+            }
+
+            .brand-info p {
+                color: #666 !important;
+            }
+
+            .hero-photo,
+            .hero-photo-frame {
+                display: none !important;
+            }
+        }
+
+        /* Les puces qui scintillent */
+        /* Étoiles scintillantes */
+        .stars span {
+            color: #6366f1;
+            font-size: 16px;
+            margin: 0 2px;
+            animation: star-blink 1.5s infinite alternate;
+        }
+
+        .stars span:nth-child(2) {
+            animation-delay: 0.3s;
+        }
+
+        .stars span:nth-child(3) {
+            animation-delay: 0.6s;
+        }
+
+        @keyframes star-blink {
+            0% {
+                opacity: 0.3;
+                transform: scale(0.8);
+            }
+
+            50% {
+                opacity: 1;
+                transform: scale(1.2);
+            }
+
+            100% {
+                opacity: 0.3;
+                transform: scale(0.8);
+            }
+        }
+
+        /* ----------------- Icones dans cercle scintillant ----------------- */
+        .icon-circle {
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            width: 28px;
+            /* diamètre du cercle */
+            height: 28px;
+            border: 3px solid #6366f1;
+            border-radius: 50%;
+            margin-right: 8px;
+            vertical-align: middle;
+            color: #6366f1;
+            font-size: 14px;
+            animation: icon-blink 1.5s infinite alternate;
+            /* <- changer circle-blink en icon-blink */
+        }
+
+        /* Animation propre pour les icônes */
+        @keyframes icon-blink {
+            0% {
+                transform: scale(0.85);
+                opacity: 0.4;
+            }
+
+            50% {
+                transform: scale(1.1);
+                opacity: 1;
+            }
+
+            100% {
+                transform: scale(0.85);
+                opacity: 0.4;
+            }
+        }
+
+        /* Délais si tu as plusieurs icônes côte à côte */
+        .icon-circle:nth-child(2) {
+            animation-delay: 0.3s;
+        }
+
+        .icon-circle:nth-child(3) {
+            animation-delay: 0.6s;
         }
     </style>
 </head>
 
 <body>
+    <!-- Particles Background -->
     <div id="particles-js"></div>
 
     <header class="header">
         <div class="container">
             <div class="header-content">
                 <div class="brand">
-                    <svg class="logo" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg" aria-label="Logo Dev Deb">
+                    <svg class="logo" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg"
+                        aria-label="Logo Dev Deb">
                         <defs>
                             <linearGradient id="logoGradient" x1="0%" y1="0%" x2="100%" y2="100%">
                                 <stop offset="0%" style="stop-color:#6366f1" />
@@ -1124,9 +1489,12 @@
                         </defs>
                         <circle cx="60" cy="60" r="56" fill="url(#logoGradient)" opacity="0.1" />
                         <circle cx="60" cy="60" r="56" fill="none" stroke="url(#logoGradient)" stroke-width="2" />
-                        <path d="M25 75 Q60 45 95 75" fill="none" stroke="url(#logoGradient)" stroke-width="4" stroke-linecap="round" />
-                        <path d="M35 75 Q60 55 85 75" fill="none" stroke="url(#logoGradient)" stroke-width="3" stroke-linecap="round" opacity="0.7" />
-                        <path d="M45 75 Q60 65 75 75" fill="none" stroke="url(#logoGradient)" stroke-width="2" stroke-linecap="round" opacity="0.5" />
+                        <path d="M25 75 Q60 45 95 75" fill="none" stroke="url(#logoGradient)" stroke-width="4"
+                            stroke-linecap="round" />
+                        <path d="M35 75 Q60 55 85 75" fill="none" stroke="url(#logoGradient)" stroke-width="3"
+                            stroke-linecap="round" opacity="0.7" />
+                        <path d="M45 75 Q60 65 75 75" fill="none" stroke="url(#logoGradient)" stroke-width="2"
+                            stroke-linecap="round" opacity="0.5" />
                     </svg>
                     <div class="brand-info">
                         <h1>Dev Deb</h1>
@@ -1152,6 +1520,7 @@
     </header>
 
     <main>
+        <!-- Hero Section -->
         <section id="hero" class="hero">
             <div class="container">
                 <div class="hero-content">
@@ -1177,7 +1546,13 @@
                         <div class="hero-photo-container">
                             <div class="hero-photo-frame">
                                 <div class="hero-photo-inner">
+                                    <!-- REMPLACEZ CE PLACEHOLDER PAR VOTRE PHOTO -->
+                                    <!-- <div class="hero-photo-placeholder">
+                    <i class="fas fa-camera"></i><br>Votre photo<br>de profil ici
+                  </div>
+                  Décommentez et utilisez ceci quand vous aurez votre photo : -->
                                     <img src="votre-photo-about.jpg" alt="NASSAM Pêlê Deb" class="hero-photo-img">
+
                                 </div>
                             </div>
                         </div>
@@ -1190,6 +1565,7 @@
             </div>
         </section>
 
+        <!------------------- À propos Section ------------------->
         <section id="about" class="about">
             <div class="container">
                 <div class="section-title" data-aos="fade-up">
@@ -1201,23 +1577,32 @@
                     <div class="about-photo" data-aos="fade-right">
                         <div class="about-photo-container">
                             <div class="about-photo-inner">
+                                <!-- REMPLACEZ CE PLACEHOLDER PAR VOTRE PHOTO -->
+                                <!--<div class="about-photo-placeholder">
+                  <i class="fas fa-user"></i><br>Votre photo<br>professionnelle<br>ici
+                </div>
+                 Décommentez et utilisez ceci quand vous aurez votre photo :-->
                                 <img src="votre-photo-about.jpg" alt="NASSAM Pêlê Deb" class="about-photo-img">
+
                             </div>
                         </div>
                     </div>
-
                     <div class="about-text" data-aos="fade-left">
                         <p class="about-intro">
                             Passionnée par l'innovation technologique et l'expérience utilisateur,
                             je transforme des idées créatives en solutions numériques performantes.
                         </p>
-
                         <p class="about-description">
                             Diplômée en développement web et mobile, j'ai acquis une solide expertise
                             dans la création d'applications modernes et responsives. Mon approche combine
                             rigueur technique et créativité pour livrer des projets qui dépassent les attentes.
                         </p>
-
+                        <p class="about-description">
+                            Toujours à la recherche de nouveaux défis, j'aime collaborer avec des équipes
+                            dynamiques et contribuer à des projets qui ont un impact positif.
+                            Mon objectif est de créer des expériences numériques qui simplifient la vie
+                            des utilisateurs tout en respectant les meilleures pratiques du développement.
+                        </p>
                         <div class="stats-grid">
                             <div class="stat-card" data-aos="zoom-in" data-aos-delay="100">
                                 <span class="stat-number">5+</span>
@@ -1236,7 +1621,6 @@
                                 <span class="stat-label">Clients Satisfaits</span>
                             </div>
                         </div>
-
                         <div class="hero-cta">
                             <a href="#contact" class="btn btn-primary">
                                 <i class="fas fa-handshake"></i>
@@ -1250,19 +1634,22 @@
                     </div>
                 </div>
             </div>
-            <div class="stars">
+            <div class="stars"
+                style="margin-top: 90px; margin-bottom: -60px; display: flex; justify-content: center; align-items: center;">
                 <span>★</span>
                 <span>★</span>
                 <span>★</span>
             </div>
         </section>
 
+        <!------------------- Formation Section ------------------->
         <section id="formation" class="formation">
             <div class="container">
                 <div class="section-title" data-aos="fade-up">
                     <h2>Formation & Parcours</h2>
                 </div>
 
+                <!-- Parcours académique -->
                 <div class="category" data-aos="fade-up" style="margin-bottom: 30px;">
                     <p style="text-align: center; margin-top: -50px; margin-bottom: 20px;">
                         <span class="icon-circle"><i class="fas fa-graduation-cap"></i></span>
@@ -1272,10 +1659,13 @@
                         <div class="timeline-item" data-aos="fade-right">
                             <div class="timeline-date">2022-2025</div>
                             <h3 class="timeline-title">Licence en Système Informatique et Logiciel</h3>
-                            <div class="timeline-institution">Institut Universitaire LES COURS SONOU de Parakou, Bénin</div>
+                            <div class="timeline-institution">Institut Universitaire LES COURS SONOU de Parakou, Bénin
+                            </div>
                             <p class="timeline-description">
                                 Formation approfondie en développement logiciel, gestion de bases de données,
                                 algorithmes et structures de données.
+                                Spécialisation en développement web et mobile, avec des projets concrets utilisant les
+                                technologies modernes et performantes.
                             </p>
                         </div>
                         <div class="timeline-item" data-aos="fade-right" data-aos-delay="300">
@@ -1283,12 +1673,16 @@
                             <h3 class="timeline-title">Baccalauréat Scientifique</h3>
                             <div class="timeline-institution">Collège d'Enseignement Général 1 de Djougou, Bénin</div>
                             <p class="timeline-description">
-                                Baccalauréat série D avec mention Passable.
+                                Baccalauréat série D (Mathématiques, Biologie et Sciences Physiques-Chimie) avec mention
+                                Passable.
+                                Développement de l'esprit logique et analytique, bases solides en mathématiques et
+                                sciences appliquées.
                             </p>
                         </div>
                     </div>
                 </div>
 
+                <!-- Évolution professionnelle -->
                 <div class="category" data-aos="fade-up" style="margin-bottom: 40px; margin-top: 30px;">
                     <p style="text-align: center; margin-bottom: 20px;">
                         <span class="icon-circle"><i class="fas fa-briefcase"></i></span>
@@ -1301,22 +1695,43 @@
                             <div class="timeline-institution">IMHOTEP Labs</div>
                             <p class="timeline-description">
                                 Réalisation du projet de soutenance : conception et développement d'une application web.
+                                Participation à d'autres activités internes de la structure, telles que l’analyse des
+                                besoins,
+                                la conception d'interfaces et la collaboration avec l’équipe technique pour le
+                                développement et les tests.
+                                Développement de compétences pratiques en gestion de projet, conception logicielle et
+                                travail en équipe.
                             </p>
                         </div>
                         <div class="timeline-item" data-aos="fade-right">
                             <div class="timeline-date">2025</div>
                             <h3 class="timeline-title">Formation Flutter & Dart - Développement Mobile</h3>
-                            <div class="timeline-institution">D-CLIC, Formez-vous au numérique avec l'OIF</div>
+                            <div class="timeline-institution">D-CLIC, Formez-vous au numérique avec l'OIF
+                            </div>
                             <p class="timeline-description">
-                                Maîtrise du langage Dart et développement d'applications mobiles fonctionnelles.
+                                Installation et configuration de l'environnement Flutter & Dart.
+                                Maîtrise du langage Dart pour développer des programmes complexes.
+                                Compréhension et utilisation des widgets avec et sans état.
+                                Conception d’interfaces utilisateur élémentaires et intégration d’une base de données
+                                locale avec SQFLite.
+                                Développement d’applications mobiles fonctionnelles et pratiques.
                             </p>
                         </div>
                         <div class="timeline-item" data-aos="fade-right">
                             <div class="timeline-date">2025</div>
-                            <h3 class="timeline-title">Formation Mobile App Design & UI/UX</h3>
-                            <div class="timeline-institution">D-CLIC, Formez-vous au numérique avec l'OIF</div>
+                            <h3 class="timeline-title">Formation Mobile App Design & UI/UX – Écoconception et
+                                prototypage</h3>
+                            <div class="timeline-institution">D-CLIC, Formez-vous au numérique avec l'OIF
+                            </div>
                             <p class="timeline-description">
-                                Conception d'interfaces utilisateur attrayantes et écoconception.
+                                Compréhension des principaux langages et approches pour le développement d’applications
+                                mobiles.
+                                Conception d’interfaces utilisateur attrayantes en appliquant les bonnes pratiques
+                                d’écoconception.
+                                Création de maquettes (wireframes) et prototypes d’applications mobiles.
+                                Application des directives "Material App" pour des interfaces modernes et intuitives.
+                                Utilisation d’outils de développement mobile sans code (App Inventor, Flutter Flow,
+                                Nowa) pour créer des applications fonctionnelles.
                             </p>
                         </div>
                         <div class="timeline-item" data-aos="fade-right">
@@ -1324,7 +1739,10 @@
                             <h3 class="timeline-title">Stage Dév. Web / UI-UX</h3>
                             <div class="timeline-institution">WASSANGARI Labs</div>
                             <p class="timeline-description">
-                                Réalisation de sites web et création de maquettes interactives avec Figma.
+                                Réalisation de sites web à partir de maquettes fournies et création de maquettes
+                                interactives avec Figma.
+                                Participation à la conception et au développement d’applications web, en respectant les
+                                standards UX/UI et la compatibilité multi-navigateurs.
                             </p>
                         </div>
                         <div class="timeline-item" data-aos="fade-right">
@@ -1332,12 +1750,16 @@
                             <h3 class="timeline-title">Stage Graphiste / Designer graphique</h3>
                             <div class="timeline-institution">Préfecture Du Département De La DONGA</div>
                             <p class="timeline-description">
-                                Création de visuels attractifs et professionnels pour différents supports.
+                                Création de visuels attractifs et professionnels pour différents supports : flyers,
+                                logos, affiches et contenus numériques. Maîtrise d’Adobe Illustrator pour le design
+                                vectoriel et la mise en page. Développement de la créativité, sens de l’esthétique,
+                                cohérence visuelle et respect des briefs clients.
                             </p>
                         </div>
                     </div>
                 </div>
 
+                <!-- Développement personnel -->
                 <div class="category" data-aos="fade-up">
                     <p style="text-align: center; margin-bottom: 20px;">
                         <span class="icon-circle"><i class="fas fa-seedling"></i></span>
@@ -1350,18 +1772,35 @@
                             <div class="timeline-institution">Bibliothèque du CAEB, Parakou</div>
                             <p class="timeline-description">
                                 Programme visant à développer la paix intérieure et la conscience de soi.
+                                Comprend des activités de réflexion, d'appréciation et de renforcement des ressources
+                                personnelles telles que la force intérieure, le choix et l'espoir.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="timeline">
+                        <div class="timeline-item" data-aos="fade-left">
+                            <div class="timeline-date">2023</div>
+                            <h3 class="timeline-title">Formation en Art Oratoire</h3>
+                            <div class="timeline-institution">CLUB RFI COTONOU</div>
+                            <p class="timeline-description">
+                                Formation pratique axée sur la prise de parole en public, le développement de la
+                                confiance,
+                                la maîtrise de la voix et du langage corporel. Exercices de discours, improvisation et
+                                techniques pour captiver un auditoire.
                             </p>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="stars">
+            <div class="stars"
+                style="margin-top: 50px; margin-bottom: -80px; display: flex; justify-content: center; align-items: center;">
                 <span>★</span>
                 <span>★</span>
                 <span>★</span>
             </div>
         </section>
 
+        <!------------------- Certifications & Attestations Section ------------------->
         <section id="certifications" class="certifications">
             <div class="container">
                 <div class="section-title" data-aos="fade-up">
@@ -1369,6 +1808,7 @@
                     <p>Mes certifications, attestations et formations validées</p>
                 </div>
 
+                <!-- Sous-section 1 : Certifications professionnelles -->
                 <div style="text-align: center; margin-bottom: 40px;">
                     <p style="margin-top: -50px; margin-bottom: 20px;">
                         <span class="icon-circle"><i class="fas fa-graduation-cap"></i></span>
@@ -1377,10 +1817,13 @@
                     <div class="certifications-grid">
                         <div class="certification-card" data-aos="flip-left">
                             <div class="certification-header">
-                                <div class="certification-icon"><i class="fas fa-graduation-cap"></i></div>
+                                <div class="certification-icon">
+                                    <i class="fas fa-graduation-cap"></i>
+                                </div>
                                 <div class="certification-info">
                                     <h3 class="certification-name">Licence en Système Informatique et Logiciel</h3>
-                                    <div class="certification-org">Institut Universitaire LES COURS SONOU de Parakou, Bénin</div>
+                                    <div class="certification-org">Institut Universitaire LES COURS SONOU de Parakou,
+                                        Bénin</div>
                                     <div class="certification-year">2025</div>
                                 </div>
                             </div>
@@ -1389,19 +1832,22 @@
                                     <i class="fas fa-check-circle"></i>
                                     Diplôme de Licence
                                 </div>
-                                <a href="#" target="_blank" class="btn-certificate">
+                                <a href="https://drive.google.com/file/d/EXEMPLE_ID_1/view" target="_blank"
+                                    rel="noopener noreferrer" class="btn-certificate">
                                     <i class="fas fa-external-link-alt"></i>
                                     Voir le diplôme
                                 </a>
                             </div>
                         </div>
-
                         <div class="certification-card" data-aos="flip-left">
                             <div class="certification-header">
-                                <div class="certification-icon"><i class="fas fa-graduation-cap"></i></div>
+                                <div class="certification-icon">
+                                    <i class="fas fa-graduation-cap"></i>
+                                </div>
                                 <div class="certification-info">
                                     <h3 class="certification-name">Baccalauréat Scientifique - Série D</h3>
-                                    <div class="certification-org">Collège d'Enseignement Général 1 de Djougou, Bénin</div>
+                                    <div class="certification-org">Collège d'Enseignement Général 1 de Djougou, Bénin
+                                    </div>
                                     <div class="certification-year">2022</div>
                                 </div>
                             </div>
@@ -1410,7 +1856,8 @@
                                     <i class="fas fa-check-circle"></i>
                                     Diplôme du BAC
                                 </div>
-                                <a href="#" target="_blank" class="btn-certificate">
+                                <a href="https://drive.google.com/file/d/EXEMPLE_ID_2/view" target="_blank"
+                                    rel="noopener noreferrer" class="btn-certificate">
                                     <i class="fas fa-external-link-alt"></i>
                                     Voir le diplôme
                                 </a>
@@ -1419,16 +1866,19 @@
                     </div>
                 </div>
 
+                <!-- Sous-section 2 : Formations validées -->
                 <div style="text-align: center; margin-bottom: 40px; margin-top: 50px;">
                     <p style="margin-bottom: 20px;">
                         <span class="icon-circle"><i class="fas fa-briefcase"></i></span>
                         Attestations de stages & expériences pratiques
                     </p>
-
                     <div class="certifications-grid">
+                        <!-- Formation 1 -->
                         <div class="certification-card" data-aos="flip-left" data-aos-delay="100">
                             <div class="certification-header">
-                                <div class="certification-icon"><i class="fas fa-briefcase"></i></div>
+                                <div class="certification-icon">
+                                    <i class="fas fa-briefcase"></i>
+                                </div>
                                 <div class="certification-info">
                                     <h3 class="certification-name">Stagiaire Développeuse Web</h3>
                                     <div class="certification-org">IMHOTEP Labs</div>
@@ -1438,18 +1888,20 @@
                             <div class="certification-footer">
                                 <div class="certification-status">
                                     <i class="fas fa-check-circle"></i>
-                                    Attestation de stage
+                                    Attestation de stage de la Licence 3
                                 </div>
-                                <a href="#" target="_blank" class="btn-certificate">
+                                <a href="https://drive.google.com/file/d/EXEMPLE_ID_4/view" target="_blank"
+                                    rel="noopener noreferrer" class="btn-certificate">
                                     <i class="fas fa-external-link-alt"></i>
                                     Voir l'attestation
                                 </a>
                             </div>
                         </div>
-
                         <div class="certification-card" data-aos="flip-left" data-aos-delay="200">
                             <div class="certification-header">
-                                <div class="certification-icon"><i class="fas fa-briefcase"></i></div>
+                                <div class="certification-icon">
+                                    <i class="fas fa-briefcase"></i>
+                                </div>
                                 <div class="certification-info">
                                     <h3 class="certification-name">Stagiaire Dév. Web / UI-UX</h3>
                                     <div class="certification-org">WASSANGARI Labs</div>
@@ -1459,9 +1911,33 @@
                             <div class="certification-footer">
                                 <div class="certification-status">
                                     <i class="fas fa-check-circle"></i>
-                                    Attestation de stage
+                                    Attestation de stage de Licence 2
                                 </div>
-                                <a href="#" target="_blank" class="btn-certificate">
+                                <a href="https://drive.google.com/file/d/EXEMPLE_ID_5/view" target="_blank"
+                                    rel="noopener noreferrer" class="btn-certificate">
+                                    <i class="fas fa-external-link-alt"></i>
+                                    Voir l'attestation
+                                </a>
+                            </div>
+                        </div>
+                        <div class="certification-card" data-aos="flip-left" data-aos-delay="200">
+                            <div class="certification-header">
+                                <div class="certification-icon">
+                                    <i class="fas fa-briefcase"></i>
+                                </div>
+                                <div class="certification-info">
+                                    <h3 class="certification-name">Stagiaire Graphiste / Designer graphique</h3>
+                                    <div class="certification-org">Préfecture Du Département De La DONGA</div>
+                                    <div class="certification-year">2023</div>
+                                </div>
+                            </div>
+                            <div class="certification-footer">
+                                <div class="certification-status">
+                                    <i class="fas fa-check-circle"></i>
+                                    Attestation de stage de Licence 1
+                                </div>
+                                <a href="https://drive.google.com/file/d/EXEMPLE_ID_5/view" target="_blank"
+                                    rel="noopener noreferrer" class="btn-certificate">
                                     <i class="fas fa-external-link-alt"></i>
                                     Voir l'attestation
                                 </a>
@@ -1470,16 +1946,19 @@
                     </div>
                 </div>
 
+                <!-- Sous-section 3 : Développement personnel certifié -->
                 <div style="text-align: center; margin-bottom: 40px; margin-top: 50px;">
                     <p style="margin-bottom: 20px;">
                         <span class="icon-circle"><i class="fas fa-award"></i></span>
-                        Certifications professionnelles
+                        Certifications & attestations professionnelles
                     </p>
 
                     <div class="certifications-grid">
                         <div class="certification-card" data-aos="flip-left" data-aos-delay="100">
                             <div class="certification-header">
-                                <div class="certification-icon"><i class="fas fa-mobile-alt"></i></div>
+                                <div class="certification-icon">
+                                    <i class="fas fa-mobile-alt"></i>
+                                </div>
                                 <div class="certification-info">
                                     <h3 class="certification-name">Flutter & Dart - Développement Mobile</h3>
                                     <div class="certification-org">D-CLIC, Formez-vous au numérique avec l'OIF</div>
@@ -1491,7 +1970,8 @@
                                     <i class="fas fa-check-circle"></i>
                                     Attestation de formation
                                 </div>
-                                <a href="#" target="_blank" class="btn-certificate">
+                                <a href="https://drive.google.com/file/d/EXEMPLE_ID_6/view" target="_blank"
+                                    rel="noopener noreferrer" class="btn-certificate">
                                     <i class="fas fa-external-link-alt"></i>
                                     Voir l'attestation
                                 </a>
@@ -1500,9 +1980,12 @@
 
                         <div class="certification-card" data-aos="flip-left" data-aos-delay="100">
                             <div class="certification-header">
-                                <div class="certification-icon"><i class="fas fa-mobile-alt"></i></div>
+                                <div class="certification-icon">
+                                    <i class="fas fa-mobile-alt"></i>
+                                </div>
                                 <div class="certification-info">
-                                    <h3 class="certification-name">Mobile App Design & UI/UX</h3>
+                                    <h3 class="certification-name">Mobile App Design & UI/UX – Écoconception et
+                                        prototypage</h3>
                                     <div class="certification-org">D-CLIC, Formez-vous au numérique avec l'OIF</div>
                                     <div class="certification-year">2025</div>
                                 </div>
@@ -1512,7 +1995,8 @@
                                     <i class="fas fa-check-circle"></i>
                                     Attestation de formation
                                 </div>
-                                <a href="#" target="_blank" class="btn-certificate">
+                                <a href="https://drive.google.com/file/d/EXEMPLE_ID_6/view" target="_blank"
+                                    rel="noopener noreferrer" class="btn-certificate">
                                     <i class="fas fa-external-link-alt"></i>
                                     Voir l'attestation
                                 </a>
@@ -1521,6 +2005,7 @@
                     </div>
                 </div>
 
+                <!-- Sous-section 3 : Développement personnel certifié -->
                 <div style="text-align: center; margin-bottom: 40px; margin-top: 50px;">
                     <p style="margin-bottom: 20px;">
                         <span class="icon-circle"><i class="fas fa-seedling"></i></span>
@@ -1530,7 +2015,9 @@
                     <div class="certifications-grid">
                         <div class="certification-card" data-aos="flip-left" data-aos-delay="100">
                             <div class="certification-header">
-                                <div class="certification-icon"><i class="fas fa-brain"></i></div>
+                                <div class="certification-icon">
+                                    <i class="fas fa-brain"></i>
+                                </div>
                                 <div class="certification-info">
                                     <h3 class="certification-name">Programme d'Éducation pour la Paix – Prem Rawat</h3>
                                     <div class="certification-org">Bibliothèque du CAEB, Parakou</div>
@@ -1542,22 +2029,50 @@
                                     <i class="fas fa-check-circle"></i>
                                     Attestation de formation
                                 </div>
-                                <a href="#" target="_blank" class="btn-certificate">
+                                <a href="https://drive.google.com/file/d/EXEMPLE_ID_6/view" target="_blank"
+                                    rel="noopener noreferrer" class="btn-certificate">
                                     <i class="fas fa-external-link-alt"></i>
                                     Voir l'attestation
                                 </a>
                             </div>
                         </div>
+                        <div class="certifications-grid">
+                            <div class="certification-card" data-aos="flip-left" data-aos-delay="200">
+                                <div class="certification-header">
+                                    <div class="certification-icon">
+                                        <i class="fas fa-microphone-alt"></i>
+                                    </div>
+                                    <div class="certification-info">
+                                        <h3 class="certification-name">Formation en Art Oratoire</h3>
+                                        <div class="certification-org">CLUB RFI COTONOU</div>
+                                        <div class="certification-year">2023</div>
+                                    </div>
+                                </div>
+                                <div class="certification-footer">
+                                    <div class="certification-status">
+                                        <i class="fas fa-check-circle"></i>
+                                        Attestation de formation
+                                    </div>
+                                    <a href="https://drive.google.com/file/d/EXEMPLE_ID/view" target="_blank"
+                                        rel="noopener noreferrer" class="btn-certificate">
+                                        <i class="fas fa-external-link-alt"></i>
+                                        Voir l'attestation
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                </div>
-            </div>
-            <div class="stars">
-                <span>★</span>
-                <span>★</span>
-                <span>★</span>
-            </div>
+
+                    <!-- Étoiles scintillantes en bas -->
+                    <div class="stars"
+                        style="margin-top: 90px; margin-bottom: -60px; display: flex; justify-content: center; align-items: center;">
+                        <span>★</span>
+                        <span>★</span>
+                        <span>★</span>
+                    </div>
         </section>
 
+        <!------------------- Compétences ------------------->
         <section id="competences" class="competences">
             <div class="container">
                 <div class="section-title" data-aos="fade-up">
@@ -1573,7 +2088,9 @@
                         <div class="progress-bar">
                             <div class="progress-fill" style="width: 80%;"></div>
                         </div>
-                        <p class="skill-description">Maîtrise avancée du HTML sémantique et CSS moderne</p>
+                        <p class="skill-description">
+                            Maîtrise avancée du HTML sémantique et CSS moderne, animations, Grid, Flexbox
+                        </p>
                     </div>
 
                     <div class="skill-card" data-aos="fade-up" data-aos-delay="100">
@@ -1584,7 +2101,9 @@
                         <div class="progress-bar">
                             <div class="progress-fill" style="width: 45%;"></div>
                         </div>
-                        <p class="skill-description">JavaScript ES6+, manipulation DOM, APIs</p>
+                        <p class="skill-description">
+                            JavaScript ES6+, manipulation DOM, APIs, programmation asynchrone
+                        </p>
                     </div>
 
                     <div class="skill-card" data-aos="fade-up" data-aos-delay="200">
@@ -1595,7 +2114,9 @@
                         <div class="progress-bar">
                             <div class="progress-fill" style="width: 60%;"></div>
                         </div>
-                        <p class="skill-description">Développement backend, POO, bases de données MySQL</p>
+                        <p class="skill-description">
+                            Développement backend, POO, bases de données MySQL, sécurité web
+                        </p>
                     </div>
 
                     <div class="skill-card" data-aos="fade-up" data-aos-delay="300">
@@ -1606,7 +2127,9 @@
                         <div class="progress-bar">
                             <div class="progress-fill" style="width: 65%;"></div>
                         </div>
-                        <p class="skill-description">Framework CSS responsive, design mobile-first</p>
+                        <p class="skill-description">
+                            Framework CSS responsive, composants, customisation, design mobile-first
+                        </p>
                     </div>
 
                     <div class="skill-card" data-aos="fade-up" data-aos-delay="400">
@@ -1617,7 +2140,9 @@
                         <div class="progress-bar">
                             <div class="progress-fill" style="width: 40%;"></div>
                         </div>
-                        <p class="skill-description">Développement d'applications mobiles cross-platform</p>
+                        <p class="skill-description">
+                            Développement d'applications mobiles cross-platform, Dart, widgets
+                        </p>
                     </div>
 
                     <div class="skill-card" data-aos="fade-up" data-aos-delay="500">
@@ -1628,17 +2153,21 @@
                         <div class="progress-bar">
                             <div class="progress-fill" style="width: 50%;"></div>
                         </div>
-                        <p class="skill-description">Conception BDD, requêtes complexes, optimisation</p>
+                        <p class="skill-description">
+                            Conception BDD, requêtes complexes, optimisation, procédures stockées
+                        </p>
                     </div>
                 </div>
             </div>
-            <div class="stars">
+            <div class="stars"
+                style="margin-top: 90px; margin-bottom: 20px; display: flex; justify-content: center; align-items: center;">
                 <span>★</span>
                 <span>★</span>
                 <span>★</span>
             </div>
         </section>
 
+        <!------------------- Projets ------------------->
         <section id="projets" class="projets">
             <div class="container">
                 <div class="section-title" data-aos="fade-up">
@@ -1647,10 +2176,13 @@
                 </div>
                 <div class="grid grid-2">
                     <div class="project-card" data-aos="zoom-in">
-                        <h3 class="project-title">Portfolio Personnel</h3>
+                        <div class="project-header">
+                            <h3 class="project-title">Portfolio Personnel</h3>
+                        </div>
                         <p class="project-description">
                             Site web responsive présentant mon parcours, mes compétences et mes projets.
-                            Conçu avec une approche mobile-first et une attention particulière à l'expérience utilisateur.
+                            Conçu avec une approche mobile-first et une attention particulière à l'expérience
+                            utilisateur.
                         </p>
                         <div class="tech-stack">
                             <span class="tech-tag">HTML5</span>
@@ -1658,6 +2190,13 @@
                             <span class="tech-tag">JavaScript</span>
                             <span class="tech-tag">Responsive Design</span>
                         </div>
+                        <!-- <div class="project-status">
+                            <i class="fas fa-circle-notch"></i>
+                            En cours
+                            <i class="fas fa-lock"></i>
+                            Projet confidentiel – pas de démo publique
+                        </div> -->
+                        <!-- Boutons -->
                         <div class="project-links">
                             <a href="#" target="_blank" class="btn-project">
                                 <i class="fas fa-external-link-alt"></i> Voir en ligne
@@ -1669,13 +2208,15 @@
                     </div>
                 </div>
             </div>
-            <div class="stars">
+            <div class="stars"
+                style="margin-top: 90px; margin-bottom: -60px; display: flex; justify-content: center; align-items: center;">
                 <span>★</span>
                 <span>★</span>
                 <span>★</span>
             </div>
         </section>
 
+        <!------------------- Contact ------------------->
         <section id="contact" class="contact">
             <div class="container">
                 <div class="section-title" data-aos="fade-up">
@@ -1684,7 +2225,8 @@
                 </div>
                 <div class="contact-grid">
                     <div class="contact-info" data-aos="fade-right">
-                        <h3 style="margin-bottom: var(--space-lg); color: var(--text-primary);">Informations de Contact</h3>
+                        <h3 style="margin-bottom: var(--space-lg); color: var(--text-primary);">Informations de Contact
+                        </h3>
                         <div class="contact-item">
                             <i class="fas fa-envelope" style="color: var(--accent-primary);"></i>
                             <div>
@@ -1703,7 +2245,8 @@
                             <i class="fab fa-github" style="color: var(--accent-primary);"></i>
                             <div>
                                 <strong>GitHub</strong><br>
-                                <a href="https://github.com/Dev3Deb" target="_blank">github.com/Dev3Deb</a>
+                                <a href="https://github.com/Dev3Deb" target="_blank"
+                                    rel="noopener noreferrer">github.com/Dev3Deb</a>
                             </div>
                         </div>
                         <div class="contact-item">
@@ -1723,26 +2266,31 @@
                     </div>
 
                     <form class="contact-form" data-aos="fade-left" onsubmit="handleFormSubmit(event)" novalidate>
-                        <h3 style="margin-bottom: var(--space-lg); color: var(--text-primary);">Envoyez-moi un message</h3>
+                        <h3 style="margin-bottom: var(--space-lg); color: var(--text-primary);">Envoyez-moi un message
+                        </h3>
 
                         <div class="form-group">
                             <label for="name" class="form-label">Nom complet *</label>
-                            <input type="text" id="name" name="name" class="form-input" placeholder="Votre nom et prénom" required>
+                            <input type="text" id="name" name="name" class="form-input"
+                                placeholder="Votre nom et prénom" required>
                         </div>
 
                         <div class="form-group">
                             <label for="email" class="form-label">Adresse email *</label>
-                            <input type="email" id="email" name="email" class="form-input" placeholder="votre.email@exemple.com" required>
+                            <input type="email" id="email" name="email" class="form-input"
+                                placeholder="votre.email@exemple.com" required>
                         </div>
 
                         <div class="form-group">
                             <label for="subject" class="form-label">Sujet</label>
-                            <input type="text" id="subject" name="subject" class="form-input" placeholder="Objet de votre message">
+                            <input type="text" id="subject" name="subject" class="form-input"
+                                placeholder="Objet de votre message">
                         </div>
 
                         <div class="form-group">
                             <label for="message" class="form-label">Message *</label>
-                            <textarea id="message" name="message" class="form-textarea" rows="5" placeholder="Décrivez votre projet ou votre demande..." required></textarea>
+                            <textarea id="message" name="message" class="form-textarea" rows="5"
+                                placeholder="Décrivez votre projet ou votre demande..." required></textarea>
                         </div>
 
                         <button type="submit" class="btn btn-primary" style="width: 100%;">
@@ -1750,8 +2298,9 @@
                             Envoyer le message
                         </button>
 
-                        <p style="font-size: 0.875rem; color: var(--text-muted); margin-top: var(--space-md); text-align: center;">
-                            * Champs obligatoires
+                        <p
+                            style="font-size: 0.875rem; color: var(--text-muted); margin-top: var(--space-md); text-align: center;">
+                            * Champs obligatoires. Votre message sera traité dans les plus brefs délais.
                         </p>
                     </form>
                 </div>
@@ -1761,7 +2310,8 @@
 
     <footer class="footer">
         <div class="container">
-            <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: var(--space-md); margin-bottom: var(--space-lg);">
+            <div
+                style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: var(--space-md); margin-bottom: var(--space-lg);">
                 <div>
                     <h3 style="color: var(--text-primary); margin-bottom: var(--space-sm);">NASSAM Pêlê Deb</h3>
                     <p>Développeuse Web & Mobile passionnée</p>
@@ -1779,67 +2329,151 @@
                 </div>
             </div>
 
-            <div style="border-top: 1px solid rgba(255, 255, 255, 0.1); padding-top: var(--space-lg); display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: var(--space-md);">
+            <div
+                style="border-top: 1px solid rgba(255, 255, 255, 0.1); padding-top: var(--space-lg); display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: var(--space-md);">
                 <p>&copy; 2025 NASSAM Pêlê Deb. Tous droits réservés.</p>
                 <p>Fait avec <i class="fas fa-heart" style="color: var(--accent-primary);"></i> au Bénin 🇧🇯</p>
             </div>
         </div>
     </footer>
 
+    <!-- Theme Toggle Button -->
     <div class="theme-toggle" title="Changer de thème">
         <i class="fas fa-moon"></i>
     </div>
 
+    <!-- Scripts -->
     <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
     <script>
-        AOS.init({ duration: 800, once: true, offset: 100 });
+        // Initialisation des animations au scroll
+        AOS.init({
+            duration: 800,
+            once: true,
+            offset: 100
+        });
 
+        // Configuration des particules en arrière-plan
         particlesJS('particles-js', {
             particles: {
-                number: { value: 80, density: { enable: true, value_area: 800 } },
-                color: { value: "#6366f1" },
-                shape: { type: "circle" },
-                opacity: { value: 0.5, random: true, anim: { enable: true, speed: 1, opacity_min: 0.1 } },
-                size: { value: 3, random: true, anim: { enable: true, speed: 2, size_min: 0.3 } },
-                line_linked: { enable: true, distance: 150, color: "#6366f1", opacity: 0.4, width: 1 },
-                move: { enable: true, speed: 1, direction: "none", random: true }
+                number: {
+                    value: 80,
+                    density: {
+                        enable: true,
+                        value_area: 800
+                    }
+                },
+                color: {
+                    value: "#6366f1"
+                },
+                shape: {
+                    type: "circle",
+                    stroke: {
+                        width: 0,
+                        color: "#000000"
+                    }
+                },
+                opacity: {
+                    value: 0.5,
+                    random: true,
+                    anim: {
+                        enable: true,
+                        speed: 1,
+                        opacity_min: 0.1,
+                        sync: false
+                    }
+                },
+                size: {
+                    value: 3,
+                    random: true,
+                    anim: {
+                        enable: true,
+                        speed: 2,
+                        size_min: 0.3,
+                        sync: false
+                    }
+                },
+                line_linked: {
+                    enable: true,
+                    distance: 150,
+                    color: "#6366f1",
+                    opacity: 0.4,
+                    width: 1
+                },
+                move: {
+                    enable: true,
+                    speed: 1,
+                    direction: "none",
+                    random: true,
+                    straight: false,
+                    out_mode: "out",
+                    bounce: false,
+                    attract: {
+                        enable: false,
+                        rotateX: 600,
+                        rotateY: 1200
+                    }
+                }
             },
             interactivity: {
                 detect_on: "canvas",
                 events: {
-                    onhover: { enable: true, mode: "grab" },
-                    onclick: { enable: true, mode: "push" },
+                    onhover: {
+                        enable: true,
+                        mode: "grab"
+                    },
+                    onclick: {
+                        enable: true,
+                        mode: "push"
+                    },
                     resize: true
+                },
+                modes: {
+                    grab: {
+                        distance: 140,
+                        line_linked: {
+                            opacity: 1
+                        }
+                    },
+                    push: {
+                        particles_nb: 4
+                    }
                 }
             },
             retina_detect: true
         });
 
+        // Gestion du menu mobile
         const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
         const nav = document.querySelector('.nav');
 
         mobileMenuBtn.addEventListener('click', () => {
             nav.classList.toggle('active');
             const icon = mobileMenuBtn.querySelector('i');
+
             if (nav.classList.contains('active')) {
-                icon.classList.replace('fa-bars', 'fa-times');
+                icon.classList.remove('fa-bars');
+                icon.classList.add('fa-times');
                 document.body.style.overflow = 'hidden';
             } else {
-                icon.classList.replace('fa-times', 'fa-bars');
+                icon.classList.remove('fa-times');
+                icon.classList.add('fa-bars');
                 document.body.style.overflow = 'auto';
             }
         });
 
+        // Fermer le menu en cliquant sur un lien
         document.querySelectorAll('.nav a').forEach(link => {
             link.addEventListener('click', () => {
                 nav.classList.remove('active');
-                mobileMenuBtn.querySelector('i').classList.replace('fa-times', 'fa-bars');
+                mobileMenuBtn.querySelector('i').classList.remove('fa-times');
+                mobileMenuBtn.querySelector('i').classList.add('fa-bars');
                 document.body.style.overflow = 'auto';
             });
         });
 
+        // Navigation active
         const navLinks = document.querySelectorAll('.nav a');
         const sections = document.querySelectorAll('section[id]');
 
@@ -1847,6 +2481,7 @@
             let current = '';
             sections.forEach(section => {
                 const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
                 if (window.scrollY >= (sectionTop - 200)) {
                     current = section.getAttribute('id');
                 }
@@ -1859,20 +2494,31 @@
                 }
             });
 
+            // Header scroll effect
             const header = document.querySelector('.header');
-            header.classList.toggle('scrolled', window.scrollY > 100);
+            if (window.scrollY > 100) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
         });
 
+        // Smooth scroll pour les liens de navigation
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
                 const target = document.querySelector(this.getAttribute('href'));
                 if (target) {
-                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
                 }
             });
         });
 
+        // Animation des barres de progression au scroll
+        const skillCards = document.querySelectorAll('.skill-card');
         const skillObserver = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
@@ -1880,46 +2526,59 @@
                     if (progressBar) {
                         const width = progressBar.style.width;
                         progressBar.style.width = '0%';
-                        setTimeout(() => progressBar.style.width = width, 200);
+                        setTimeout(() => {
+                            progressBar.style.width = width;
+                        }, 200);
                     }
                 }
             });
         }, { threshold: 0.5 });
 
-        document.querySelectorAll('.skill-card').forEach(card => {
+        skillCards.forEach(card => {
             skillObserver.observe(card);
         });
 
+        // Gestion du formulaire de contact
         function handleFormSubmit(event) {
             event.preventDefault();
+
+            // Validation simple
             const form = event.target;
             const formData = new FormData(form);
             const data = Object.fromEntries(formData.entries());
 
+            // Vérification des champs requis
             if (!data.name.trim() || !data.email.trim() || !data.message.trim()) {
                 showNotification('Veuillez remplir tous les champs obligatoires.', 'error');
                 return;
             }
 
+            // Validation email
             const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
             if (!emailRegex.test(data.email)) {
                 showNotification('Veuillez entrer une adresse email valide.', 'error');
                 return;
             }
 
+            // Bouton de chargement
             const submitButton = form.querySelector('button[type="submit"]');
             const originalText = submitButton.innerHTML;
-            submitButton.innerHTML = `<i class="fas fa-spinner fa-spin"></i> Envoi en cours...`;
+
+            submitButton.innerHTML = `
+        <i class="fas fa-spinner fa-spin"></i>
+        Envoi en cours...
+    `;
             submitButton.disabled = true;
 
+            // Envoi avec EmailJS
             emailjs.sendForm('service_a5lrddv', 'template_73k4bhd', form)
                 .then(() => {
-                    showNotification('Message envoyé avec succès !', 'success');
+                    showNotification('Merci ! Votre message a été envoyé avec succès. Je vous répondrai dans les plus brefs délais.', 'success');
                     form.reset();
                 })
                 .catch((error) => {
                     console.error('Erreur EmailJS:', error);
-                    showNotification('Erreur lors de l\'envoi. Veuillez réessayer.', 'error');
+                    showNotification('Erreur lors de l\'envoi. Veuillez réessayer ou me contacter directement à dev3deb@gmail.com', 'error');
                 })
                 .finally(() => {
                     submitButton.innerHTML = originalText;
@@ -1927,24 +2586,26 @@
                 });
         }
 
+        // Système de notification
         function showNotification(message, type = 'info') {
             const notification = document.createElement('div');
             notification.style.cssText = `
-                position: fixed;
-                top: 20px;
-                right: 20px;
-                z-index: 1000;
-                padding: 16px 24px;
-                border-radius: 12px;
-                color: white;
-                font-weight: 500;
-                max-width: 400px;
-                box-shadow: var(--shadow-xl);
-                backdrop-filter: blur(10px);
-                animation: slideInRight 0.3s ease-out;
-                background: ${type === 'error' ? '#ef4444' : type === 'success' ? 'var(--success)' : 'var(--accent-primary)'};
-            `;
+        position: fixed;
+        top: 20px;
+        right: 20px;
+        z-index: 1000;
+        padding: 16px 24px;
+        border-radius: 12px;
+        color: white;
+        font-weight: 500;
+        max-width: 400px;
+        box-shadow: var(--shadow-xl);
+        backdrop-filter: blur(10px);
+        animation: slideInRight 0.3s ease-out;
+        background: ${type === 'error' ? '#ef4444' : type === 'success' ? 'var(--success)' : 'var(--accent-primary)'};
+      `;
             notification.textContent = message;
+
             document.body.appendChild(notification);
 
             setTimeout(() => {
@@ -1953,25 +2614,107 @@
             }, 5000);
         }
 
+        // Animation supplémentaire pour les certifications
+        const certificationCards = document.querySelectorAll('.certification-card');
+        const certificationObserver = new IntersectionObserver((entries) => {
+            entries.forEach((entry, index) => {
+                if (entry.isIntersecting) {
+                    setTimeout(() => {
+                        entry.target.style.opacity = '1';
+                        entry.target.style.transform = 'translateY(0) scale(1)';
+                    }, index * 100); // Délai échelonné pour un effet cascade
+                }
+            });
+        }, { threshold: 0.1 });
+
+        certificationCards.forEach(card => {
+            card.style.opacity = '0';
+            card.style.transform = 'translateY(30px) scale(0.95)';
+            card.style.transition = 'all 0.6s cubic-bezier(0.4, 0, 0.2, 1)';
+            certificationObserver.observe(card);
+        });
+
+        // Toggle de thème clair/sombre
         const themeToggle = document.querySelector('.theme-toggle');
         const themeIcon = themeToggle.querySelector('i');
+
+        // Vérifier le thème préféré de l'utilisateur
         const prefersDarkScheme = window.matchMedia('(prefers-color-scheme: dark)');
         const currentTheme = localStorage.getItem('theme') || (prefersDarkScheme.matches ? 'dark' : 'light');
 
+        // Appliquer le thème sauvegardé ou le thème système
         if (currentTheme === 'light') {
             document.documentElement.setAttribute('data-theme', 'light');
-            themeIcon.classList.replace('fa-moon', 'fa-sun');
+            themeIcon.classList.remove('fa-moon');
+            themeIcon.classList.add('fa-sun');
+        } else {
+            document.documentElement.setAttribute('data-theme', 'dark');
+            themeIcon.classList.remove('fa-sun');
+            themeIcon.classList.add('fa-moon');
         }
 
         themeToggle.addEventListener('click', () => {
             const currentTheme = document.documentElement.getAttribute('data-theme');
             const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
-            
+
             document.documentElement.setAttribute('data-theme', newTheme);
             localStorage.setItem('theme', newTheme);
-            themeIcon.classList.toggle('fa-sun', newTheme === 'light');
-            themeIcon.classList.toggle('fa-moon', newTheme === 'dark');
+
+            if (newTheme === 'light') {
+                themeIcon.classList.remove('fa-moon');
+                themeIcon.classList.add('fa-sun');
+            } else {
+                themeIcon.classList.remove('fa-sun');
+                themeIcon.classList.add('fa-moon');
+            }
         });
+
+        // Ajout d'animations CSS supplémentaires via JavaScript
+        const style = document.createElement('style');
+        style.textContent = `
+      @keyframes spin {
+        from { transform: rotate(0deg); }
+        to { transform: rotate(360deg); }
+      }
+      
+      @keyframes slideInRight {
+        from {
+          opacity: 0;
+          transform: translateX(100px);
+        }
+        to {
+          opacity: 1;
+          transform: translateX(0);
+        }
+      }
+      
+      @keyframes slideOutRight {
+        from {
+          opacity: 1;
+          transform: translateX(0);
+        }
+        to {
+          opacity: 0;
+          transform: translateX(100px);
+        }
+      }
+      
+      .certification-card:hover {
+        transform: translateY(-8px) scale(1.02) !important;
+      }
+
+      /* Light theme variables */
+      [data-theme="light"] {
+        --bg-primary: #f8fafc;
+        --bg-secondary: #e2e8f0;
+        --bg-tertiary: #cbd5e1;
+        --text-primary: #1e293b;
+        --text-secondary: #334155;
+        --text-muted: #64748b;
+      }
+    `;
+        document.head.appendChild(style);
     </script>
 </body>
+
 </html>
