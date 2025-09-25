@@ -1705,7 +1705,7 @@
                                 <div class="certification-status">
                                     <i class="fas fa-check-circle"></i> Attestation de stage de la Licence 3
                                 </div>
-                                <a href="https://drive.google.com/file/d/EXEMPLE_ID_4/view" target="_blank" rel="noopener noreferrer" class="btn-certificate">
+                                <a href="https://drive.google.com/file/d/1GAofsv9Rv4E4XjBayOd5-Gq1wPArsWB1/view?usp=drive_link" target="_blank" rel="noopener noreferrer" class="btn-certificate">
                                     <i class="fas fa-external-link-alt"></i> Voir l'attestation
                                 </a>
                             </div>
@@ -1725,7 +1725,7 @@
                                 <div class="certification-status">
                                     <i class="fas fa-check-circle"></i> Attestation de stage de Licence 2
                                 </div>
-                                <a href="https://drive.google.com/file/d/EXEMPLE_ID_5/view" target="_blank" rel="noopener noreferrer" class="btn-certificate">
+                                <a href="https://drive.google.com/file/d/1jq5jmz7b2cpIrkFcur5jP5f-BD8PjumL/view?usp=drive_link" target="_blank" rel="noopener noreferrer" class="btn-certificate">
                                     <i class="fas fa-external-link-alt"></i> Voir l'attestation
                                 </a>
                             </div>
@@ -1745,7 +1745,7 @@
                                 <div class="certification-status">
                                     <i class="fas fa-check-circle"></i> Attestation de stage de Licence 1
                                 </div>
-                                <a href="https://drive.google.com/file/d/EXEMPLE_ID_5/view" target="_blank" rel="noopener noreferrer" class="btn-certificate">
+                                <a href="https://drive.google.com/file/d/1vdM2kjWvoN2cy7-7rynjcop9UTvOMi9b/view?usp=drive_link" target="_blank" rel="noopener noreferrer" class="btn-certificate">
                                     <i class="fas fa-external-link-alt"></i> Voir l'attestation
                                 </a>
                             </div>
@@ -1773,7 +1773,7 @@
                                 <div class="certification-status">
                                     <i class="fas fa-check-circle"></i> Attestation de formation
                                 </div>
-                                <a href="https://drive.google.com/file/d/EXEMPLE_ID_6/view" target="_blank" rel="noopener noreferrer" class="btn-certificate">
+                                <a href="https://drive.google.com/file/d/19qsSlFX-crk-FedE1362yGWSh9AI2VTu/view?usp=drive_link" target="_blank" rel="noopener noreferrer" class="btn-certificate">
                                     <i class="fas fa-external-link-alt"></i> Voir l'attestation
                                 </a>
                             </div>
@@ -1793,7 +1793,7 @@
                                 <div class="certification-status">
                                     <i class="fas fa-check-circle"></i> Attestation de formation
                                 </div>
-                                <a href="https://drive.google.com/file/d/EXEMPLE_ID_6/view" target="_blank" rel="noopener noreferrer" class="btn-certificate">
+                                <a href="https://drive.google.com/file/d/16ASMFuh31fcy24-MghHtD075MOtYiHrW/view?usp=drive_link" target="_blank" rel="noopener noreferrer" class="btn-certificate">
                                     <i class="fas fa-external-link-alt"></i> Voir l'attestation
                                 </a>
                             </div>
@@ -1841,7 +1841,7 @@
                                 <div class="certification-status">
                                     <i class="fas fa-check-circle"></i> Attestation de formation
                                 </div>
-                                <a href="https://drive.google.com/file/d/EXEMPLE_ID/view" target="_blank" rel="noopener noreferrer" class="btn-certificate">
+                                <a href="https://drive.google.com/file/d/1TM3i_WEJ325x1iQILZ_fHa0uu4rrZkiN/view?usp=drive_link" target="_blank" rel="noopener noreferrer" class="btn-certificate">
                                     <i class="fas fa-external-link-alt"></i> Voir l'attestation
                                 </a>
                             </div>
