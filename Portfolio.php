@@ -1574,7 +1574,7 @@
                             <h3 class="timeline-title">Formation Mobile App Design & UI/UX – Écoconception et prototypage</h3>
                             <div class="timeline-institution">D-CLIC, Formez-vous au numérique avec l'OIF</div>
                             <p class="timeline-description">
-                                Compréhension des principaux langages et approches pour le développement d’applications mobiles. Conception d’interfaces utilisateur attrayantes en appliquant les bonnes pratiques d’écoconception. Création de maquettes (wireframes) et prototypes d’applications mobiles. Application des directives "Material App" pour des interfaces modernes et intuitives. Utilisation d’outils de développement mobile sans code (App Inventor, Flutter Flow, Nowa) pour créer des applications fonctionnelles.
+                                Compréhension des principaux langages et approches pour le développement d’applications mobiles. Conception d’interfaces utilisateur attrayantes en appliquant les bonnes pratiques d’écoconception. Création de maquettes (wireframes) et prototypes d’applications mobiles. Application des directives "Material App" pour des interfaces modernes et intuitives. Utilisation d’outils de développement mobile sans code (App Inventor, Flutter Flow) pour créer des applications fonctionnelles.
                             </p>
                         </div>
                         <div class="timeline-item" data-aos="fade-right">
